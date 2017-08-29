@@ -1,0 +1,24 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "Blank React project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielnvg/react-template.git"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "blank"
+  ],
+  "author": "Gabriel Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielnvg/react-template/issues"
+  },
+  "homepage": "https://github.com/gabrielnvg/react-template#readme"
+}
