@@ -1,5 +1,6 @@
 # React Template
 Projeto React em branco.
+Suporte para ES6 com Babel.
 
 # Uso
 A pasta "app" é a pasta de desenvolvimento.
@@ -14,4 +15,5 @@ $ npm run build
 ```sh
 $ npm run start
 ```
-Após, acessar no browser [http://localhost:8080](http://localhost:8080)
+Após, o browser irá abrir na URL do projeto e a cada alteração no código, ocorrerá refresh automático.
+Caso deseje mudar a porta padrão (9000), basta alterar a mesma no arquivo "webpack.config.js".
