@@ -1,10 +1,5 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-    template: __dirname + '/app/index.html',
-    filename: 'index.html',
-    inject: 'body'
-});
+import webpack from 'webpack';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     entry: __dirname + '/app/index.js',
@@ -26,11 +21,15 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
-        HTMLWebpackPluginConfig
+        new HTMLWebpackPlugin({
+            template: __dirname + '/app/index.html',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         port: 9000,
-        hot: true,
         open: true
     }
 };
