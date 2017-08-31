@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     entry: __dirname + '/app/index.js',
+
     module: {
         rules: [
             {
@@ -16,10 +17,12 @@ module.exports = {
             }
         ]
     },
+
     output: {
         path: __dirname + '/build',
         filename: 'bundle.js'
     },
+    
     plugins: [
         new HTMLWebpackPlugin({
             template: __dirname + '/app/index.html',
@@ -28,6 +31,7 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
+    
     devServer: {
         port: 9000,
         open: true

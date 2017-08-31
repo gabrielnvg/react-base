@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build-min": "webpack -p",
     "start": "webpack-dev-server"
   },
   "repository": {
