@@ -16,7 +16,12 @@ module.exports = {
             //Compila os arquivos SASS para CSS e juntamente com o import via JS, o injeta em uma tag "<style>" no HTML
             {
                 test: /\.scss$/,
-                loaders: 'style-loader!css-loader!sass-loader'
+                //A ordem de execucao dos loaders se segue da direita para a esquerda (ou baixo para cima)
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },

@@ -11,9 +11,9 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <h1>
+            <div className="component--App">
                 Hello <span className="colorful-text">{this.state.name}</span>!
-            </h1>
+            </div>
         );
     }
 }
