@@ -1,5 +1,5 @@
 # React Template
-Projeto React em branco.
+Projeto Template de React.
 <br />
 Suporte para ES6 com Babel.
 
