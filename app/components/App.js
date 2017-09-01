@@ -17,6 +17,37 @@ export default class App extends Component {
         });
     }
 
+    //BEGIN - Life Cycle functions
+    componentWillMount() {
+        console.log('Componente prestes a ser renderizado no DOM!');
+    }
+  
+    componentDidMount() {
+        console.log('Componente foi renderizado no DOM!');
+    }
+  
+    componentWillReceiveProps(newProps) {    
+        console.log('Componente prestes a receber novas props!');
+    }
+  
+    shouldComponentUpdate(newProps, newState) {
+        console.log('Componente prestes a ser atualizado, esta funcao retorna true ou false para permitir ou nao a renderizacao da atualizacao!');
+        return true;
+    }
+  
+    componentWillUpdate() {
+        console.log('Componente prestes a ser alterado!');
+    }
+  
+    componentDidUpdate() {
+        console.log('Componente foi alterado!');
+    }
+  
+    componentWillUnmount() {
+        console.log('Componente prestes a ser removido do DOM!');
+    }
+    //END - Life Cycle functions
+
     render() {
         return (
             <div className="component--App">
