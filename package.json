@@ -1,7 +1,7 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "Blank React project.",
+  "description": "React template project.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -14,8 +14,7 @@
   },
   "keywords": [
     "react",
-    "template",
-    "blank"
+    "template"
   ],
   "author": "Gabriel Gomes",
   "license": "MIT",
