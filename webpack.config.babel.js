@@ -40,7 +40,7 @@ module.exports = {
         })
     ],
 
-    //A flag "--hot" no script que roda o "webpack-dev-server" no JSON, atualiza o browser automaticamente caso o codigo seja alterado
+    //A flag "--hot" no script que roda o "webpack-dev-server" no JSON, atualiza o browser automaticamente caso o codigo seja alterado (Hot Reload)
     devServer: {
         //Porta do servidor
         port: 9000,

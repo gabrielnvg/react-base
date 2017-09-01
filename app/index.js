@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import CompTeste from './components/ComponenteTeste';
 //Style
 import './sass/main.scss';
 
 ReactDOM.render(
-    <App />,
+    <CompTeste />,
     document.getElementById('app')
 );

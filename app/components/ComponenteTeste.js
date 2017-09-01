@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+export default class ComponenteTeste extends Component {
     constructor(props) {
         super(props);
         
@@ -50,7 +50,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className="component--App">
+            <div className="component--ComponenteTeste">
                 <div>
                     <input type="text" placeholder="Your name here" value={this.state.name} onChange={this.handleChange} />
                 </div>

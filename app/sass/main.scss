@@ -1,5 +1,7 @@
-#app {
-
-    @import './components/App';
-
+//Globais
+.colorful-text {
+    color: lightblue;
 }
+
+//Componentes
+@import './components/ComponenteTeste';
