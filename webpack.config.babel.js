@@ -1,7 +1,11 @@
 import HTMLWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ImageminPlugin from 'imagemin-webpack-plugin';
 
 module.exports = {
     entry: __dirname + '/app/index.js',
+
+    context: __dirname + '/app',
 
     module: {
         rules: [
@@ -37,6 +41,16 @@ module.exports = {
             template: __dirname + '/app/index.html',
             filename: 'index.html',
             inject: 'body'
+        }),
+        //Copia as imagens
+        new CopyWebpackPlugin([{
+            from: 'img/',
+            to: 'img/'
+        }]),
+        //Minifica as imagens (precisa sempre vir depois de plugins que adicionam imagens)
+        new ImageminPlugin({
+            disable: process.env.NODE_ENV !== 'PROD', //Desabilita caso a build nao seja de Prod
+            test: /\.(jpe?g|png|gif|bmp|svg)$/i
         })
     ],
 
