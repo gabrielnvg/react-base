@@ -83,7 +83,6 @@
         "max-statements": ["off", 10],
         "new-cap": "warn",
         "new-parens": "warn",
-        "quotes": ["warn", "single"],
         "quote-props": "off",
         "radix": "off",
         "semi": "warn",

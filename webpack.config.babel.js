@@ -3,9 +3,8 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 
 module.exports = {
-    entry: __dirname + '/app/index.js',
-
     context: __dirname + '/app',
+    entry: __dirname + '/app/index.js',
 
     module: {
         rules: [
@@ -23,7 +22,12 @@ module.exports = {
                 //A ordem de execucao dos loaders se segue da direita para a esquerda (ou baixo para cima)
                 use: [
                     'style-loader',
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                             minimize: true
+                        }
+                    },
                     'sass-loader'
                 ]
             }
