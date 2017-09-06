@@ -1,3 +1,4 @@
+import autoprefixer from 'autoprefixer';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
@@ -5,6 +6,11 @@ import ImageminPlugin from 'imagemin-webpack-plugin';
 module.exports = {
     context: __dirname + '/app',
     entry: __dirname + '/app/index.js',
+    
+    output: {
+        path: __dirname + '/build',
+        filename: 'bundle.js'
+    },
 
     module: {
         rules: [
@@ -28,15 +34,18 @@ module.exports = {
                              minimize: true
                         }
                     },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: function () {
+                                return [autoprefixer];
+                            }
+                        }
+                    },
                     'sass-loader'
                 ]
             }
         ]
-    },
-
-    output: {
-        path: __dirname + '/build',
-        filename: 'bundle.js'
     },
     
     plugins: [
