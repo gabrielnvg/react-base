@@ -1,7 +1,5 @@
-# React Template
-Projeto Template de React.
-<br />
-Suporte para ES6 com Babel.
+# Base React
+Projeto Base de React usando Webpack com suporte para ES6 (Babel) e SASS.
 
 # Uso
 A pasta "app" é a pasta de desenvolvimento.

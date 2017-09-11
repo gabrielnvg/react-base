@@ -1,7 +1,7 @@
 {
-  "name": "react-template",
+  "name": "react-base",
   "version": "1.1.0",
-  "description": "React template project.",
+  "description": "Base React.",
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=PROD webpack -p",
@@ -12,18 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabrielnvg/react-template.git"
+    "url": "git+https://github.com/gabrielnvg/react-base.git"
   },
   "keywords": [
     "react",
-    "template"
+    "webpack",
+    "babel",
+    "sass"
   ],
-  "author": "Gabriel Gomes",
+  "author": "Gowebit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gabrielnvg/react-template/issues"
+    "url": "https://github.com/gabrielnvg/react-base/issues"
   },
-  "homepage": "https://github.com/gabrielnvg/react-template#readme",
+  "homepage": "https://github.com/gabrielnvg/react-base#readme",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
