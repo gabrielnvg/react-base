@@ -1,6 +1,10 @@
 # Change Log
 Todas as mudanças significativas deste projeto serão documentadas neste arquivo.
 
+## [1.1.0] - 2017-09-11
+### Added
+- Minifica o HTML no build de Prod.
+
 ## [1.0.0] - 2017-09-06
 ### Added
 - Minificador de imagens.

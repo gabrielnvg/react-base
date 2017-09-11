@@ -3,6 +3,8 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 
+const isProd = process.env.NODE_ENV === 'PROD';
+
 module.exports = {
     context: __dirname + '/app',
     entry: __dirname + '/app/index.js',
@@ -31,7 +33,7 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                             minimize: true
+                             minimize: isProd
                         }
                     },
                     {
@@ -52,6 +54,11 @@ module.exports = {
         //Cria o "index.html" (default filename) e injeta o script de import do "bundle.js" no final da tag "<body>" do "index.html"
         new HTMLWebpackPlugin({
             template: __dirname + '/app/index.html',
+            minify: {
+                collapseWhitespace: isProd,
+                collapseInlineTagWhitespace: isProd,
+                removeComments: isProd
+            },
             inject: 'body'
         }),
         //Copia as imagens
@@ -61,7 +68,7 @@ module.exports = {
         }]),
         //Minifica as imagens (precisa sempre vir depois de plugins que adicionam imagens)
         new ImageminPlugin({
-            disable: process.env.NODE_ENV !== 'PROD', //Desabilita caso a build nao seja de Prod
+            disable: !isProd,
             test: /\.(jpe?g|png|gif|bmp|svg)$/i
         })
     ],
