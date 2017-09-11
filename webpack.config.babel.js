@@ -49,10 +49,9 @@ module.exports = {
     },
     
     plugins: [
-        //Injeta o script de import do "bundle.js" no final da tag "<body>" do "index.html"
+        //Cria o "index.html" (default filename) e injeta o script de import do "bundle.js" no final da tag "<body>" do "index.html"
         new HTMLWebpackPlugin({
             template: __dirname + '/app/index.html',
-            filename: 'index.html',
             inject: 'body'
         }),
         //Copia as imagens
