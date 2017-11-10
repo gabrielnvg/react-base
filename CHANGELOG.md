@@ -1,6 +1,15 @@
 # Change Log
 Todas as mudanças significativas deste projeto serão documentadas neste arquivo.
 
+## [1.2.0] - 2017-11-10
+### Added
+- Pasta "build" agora é apagada antes de gerar um novo build.
+### Changed
+- Scripts NPM (ver "README.md").
+### Removed
+- Script NPM "server" (ver "README.md").
+- Script NPM "build-prod", pois tem a mesma função do "build".
+
 ## [1.1.0] - 2017-09-11
 ### Added
 - Minifica o HTML no build de Prod.
