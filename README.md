@@ -1,24 +1,35 @@
-# Base React
-Projeto Base de React usando Webpack com suporte para ES6 (Babel) e SASS.
+# React Base
+A base that uses the most popular React packages and Storybook.  
+Made on top of [React Slingshot](https://github.com/coryhouse/react-slingshot).
 
-# Uso
-A pasta "app" é a pasta de desenvolvimento.
-<br />
-Uma vez o webpack tendo feito o build, o resultado é gerado na pasta "build".
+## NPM Scripts
+### General
+- To install dependencies:
+```console
+$ npm i
+```
 
-# NPM Scripts
-- Para rodar o servidor do projeto, sem build:
-```sh
+### Base
+- To run the project:
+```console
 $ npm start
 ```
-- Para fazer o build do projeto minificado para produção:
-```sh
+
+- To build the project:
+
+```console
 $ npm run build
 ```
-- Para fazer o build do projeto para desenvolvimento:
-```sh
-$ npm run build:dev
+
+### Storybook
+- To run Storybook:
+
+```console
+$ npm run storybook
 ```
-Após rodar o servidor, o browser irá abrir na URL do projeto e a cada alteração no código, ocorrerá refresh automático.
-<br />
-Caso deseje mudar a porta padrão (9000), basta alterar a mesma no arquivo "webpack.config.babel.js".
+
+- To build Storybook:
+
+```console
+$ npm run build-storybook
+```
