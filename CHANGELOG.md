@@ -1,6 +1,10 @@
 # Change Log
 This file documents all significant changes made on this project.
 
+## [2.1.0] - 2020-02-02
+### Removed
+- Storybook custom theme
+
 ## [2.0.0] - 2020-02-02
 ### Added
 - All version 2.0.0 files.

@@ -1,8 +1,5 @@
 import React from 'react';
 import { addParameters, addDecorator } from '@storybook/react';
-import { DocsPage } from '@storybook/addon-docs/blocks';
-import { theme } from './../src/theme';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 
 addParameters({
   options: {
@@ -17,10 +14,6 @@ addParameters({
 
 addDecorator(storyFn => (
   <div style={{ padding: '10px 0', textAlign: 'center' }}>{storyFn()}</div>
-));
-
-addDecorator(storyFn => (
-  <MuiThemeProvider theme={theme}>{storyFn()}</MuiThemeProvider>
 ));
 
 function sortEachDepth(orderPerDepth) {
