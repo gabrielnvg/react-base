@@ -58,7 +58,7 @@
     "@storybook/addon-viewport": "^5.3.9",
     "@storybook/addons": "^5.3.9",
     "@storybook/react": "^5.3.9",
-    "acorn": "7.1.0",
+    "acorn": "7.1.1",
     "ajv": "6.10.2",
     "autoprefixer": "9.7.3",
     "babel-core": "7.0.0-bridge.0",
